@@ -39,13 +39,13 @@ function mostrarConceitoDoAluno(notas) {
     console.log('Seu conceito de avaliação foi  E')
   }else if(notas >= 3 && notas <= 5) {
     console.log('Seu conceito de avaliação foi D')
-    }else if(notas === 6 || notas === 7) {
-      console.log('Seu conceito de avaliação foi C')
-    }else if(notas === 8 || notas === 9) {
-      console.log('Seu conceito de avaliação foi B')
-    }else{
-      console.log('Sei conceito de avaliação foi A')
-    }
+  }else if(notas === 6 || notas === 7) {
+    console.log('Seu conceito de avaliação foi C')
+  }else if(notas === 8 || notas === 9) {
+    console.log('Seu conceito de avaliação foi B')
+  }else{
+    console.log('Sei conceito de avaliação foi A')
+  }
 }
 mostrarConceitoDoAluno(notas);
 
@@ -148,7 +148,8 @@ let velocidadePermitida = 80
 function calcularVelocidade (velocidade) {
   let valorDaMulta 
   if (velocidade > velocidadePermitida) {
-    return alert(`Você foi multado em R$ ${valorDaMulta = (velocidade - velocidadePermitida) * multa} reais`)
+    valorDaMulta = (velocidade - velocidadePermitida) * multa
+    return alert(`Você foi multado em R$ ${valorDaMulta} reais`)
   }else{
     return alert('Parabéns, veículo dentro da velocidade permitida! Boa Viagem!!')
   }
@@ -174,9 +175,11 @@ let IdadeParaAlistamento = 18;
 function alistamentoMilitar(ano_Atual , ano_nascimento) {
   let idade = ano_Atual - ano_nascimento
   if (idade < IdadeParaAlistamento) {
-    return  alert(`Faltam ${anosFaltantesParaAlistamento = IdadeParaAlistamento - idade} anos para você se alistar`)
+    anosFaltantesParaAlistamento = IdadeParaAlistamento - idade
+    return  alert(`Faltam ${anosFaltantesParaAlistamento} anos para você se alistar`)
   }else{
-    return alert(`Já se passaram ${anosPosIdadeAlistamento = idade - IdadeParaAlistamento} anos do seu alistamento`);
+    anosPosIdadeAlistamento = idade - IdadeParaAlistamento
+    return alert(`Já se passaram ${anosPosIdadeAlistamento} anos do seu alistamento`);
   }
 }   
 console.log(alistamentoMilitar(ano_Atual , ano_nascimento));
@@ -192,7 +195,7 @@ let distancia = prompt('Quall distância você gostaria de percorrer?Em Km...')
 let valorDokmAteDuzentos = 0.50
 let viagemMaisLongas = 0.45
 
-function calcularValorPassagem(distancia ) {
+function calcularValorPassagem(distancia) {
   if(distancia <= 200) {
     return distancia * valorDokmAteDuzentos
   }else{
@@ -213,6 +216,9 @@ classificação desse terreno, de acordo com a lista abaixo:
 
 let largura = prompt('Qual a largura do terreno?');
 let comprimento = prompt('Qual o comprimento do terreno?');
+
+
+function calcularTerreno(largura, comprimento) {
 let area = largura * comprimento
 if (area < 100) {
   console.log('Terreno Popular')
@@ -221,7 +227,8 @@ if (area < 100) {
   } else {
     console.log('Terreno VIP')
   }
-
+}
+calcularTerreno(largura, comprimento)
 
 /*
 10.Desenvolva um programa que receba o nome e a temperatura corporal de uma

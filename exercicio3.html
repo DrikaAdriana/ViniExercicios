@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testes</title>
+</head>
+<body>
+  <script>
+    let largura = prompt('Qual a largura do terreno?');
+    let comprimento = prompt('Qual o comprimento do terreno?');
+
+    function calcularTerreno(largura, comprimento) {
+      let area = largura * comprimento
+      if (area < 100) {
+      document.write('Terreno Popular')
+      } else if (area >= 100 && area <= 500) {
+        document.write('Terreno Master')
+      } else {
+        documet.write('Terreno VIP')
+      }
+    }
+    calcularTerreno(largura, comprimento)
+  </script>
+</body>
+</html>
